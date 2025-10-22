@@ -75,7 +75,7 @@
 
 
 Ответ:
-1. Манифест deployment с двумя контейнерами Nginx и MultiTool deploy.yml
+1. Манифест deployment с двумя контейнерами Nginx и MultiTool [deploy.yml](https://github.com/Mars12121/kuber-homeworks_1.4/blob/main/k8s/deploy.yml)
 ```
 apiVersion: apps/v1
 kind: Deployment
@@ -107,7 +107,7 @@ spec:
             value: "8080"
 ```
 
-2. Манифест service типа ClusterIP service.yml
+2. Манифест service типа ClusterIP [service.yml](https://github.com/Mars12121/kuber-homeworks_1.4/blob/main/k8s/service.yml)
 ```
 apiVersion: v1
 kind: Service
@@ -132,7 +132,7 @@ spec:
 3. Проверяем доступность изнутри кластера
 ![alt text](https://github.com/Mars12121/kuber-homeworks_1.4/blob/main/img/2.png)
 
-4. Манифест service типа NodePort service-np.yml
+4. Манифест service типа NodePort [service-np.yml](https://github.com/Mars12121/kuber-homeworks_1.4/blob/main/k8s/service-np.yml)
 ```
 apiVersion: v1
 kind: Service
@@ -188,7 +188,7 @@ spec:
 
 
  Ответ:
- 1. Манифест deployment backend deploy-back.yml
+ 1. Манифест deployment backend [deploy-back.yml](https://github.com/Mars12121/kuber-homeworks_1.4/blob/main/k8s/deploy-back.yml)
  ```
 apiVersion: apps/v1
 kind: Deployment
@@ -215,7 +215,7 @@ spec:
             value: "8080"
  ```
 
- Манифест deployment frontend deploy-front.yml
+ Манифест deployment frontend [deploy-front.yml](https://github.com/Mars12121/kuber-homeworks_1.4/blob/main/k8s/deploy-front.yml)
 ```
 apiVersion: apps/v1
 kind: Deployment
@@ -242,7 +242,7 @@ spec:
             value: "80"
 ```
 
-2. Манифест service backend service-back.yml
+2. Манифест service backend [service-back.yml](https://github.com/Mars12121/kuber-homeworks_1.4/blob/main/k8s/service-back.yml)
 ```
 apiVersion: v1
 kind: Service
@@ -259,7 +259,7 @@ spec:
   type: NodePort 
 ```
 
-Манифест service frontend service-front.yml
+Манифест service frontend [service-front.yml](https://github.com/Mars12121/kuber-homeworks_1.4/blob/main/k8s/service-front.yml)
 ```
 apiVersion: v1
 kind: Service
@@ -280,7 +280,7 @@ spec:
 3. Запускаем Ingress-контроллер
 ![alt text](https://github.com/Mars12121/kuber-homeworks_1.4/blob/main/img/6.png)
 
-4. Манифест ingress ingress.yml
+4. Манифест ingress [ingress.yml](https://github.com/Mars12121/kuber-homeworks_1.4/blob/main/k8s/ingress.yml)
 ```
 apiVersion: networking.k8s.io/v1
 kind: Ingress
