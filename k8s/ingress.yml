@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-front-back
+  annotations:  # ВАЖНО: Эта аннотация нужна для rewrite правил
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: svc-front # УКАЖИТЕ: Имя frontend Service
+            port:
+              number: 9001
+      - path: /api # КЛЮЧЕВОЙ ПУТЬ: API endpoint
+        pathType: Prefix
+        backend:
+          service:
+            name: svc-back # УКАЖИТЕ: Имя backend Service
+            port:
+              number: 9002

@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dep-multi-container
+  labels:
+    app: multi_web
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: multi_web
+  template:
+    metadata:
+      labels:
+        app: multi_web
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+      - name: network-multitool
+        image: wbitt/network-multitool
+        ports:
+        - containerPort: 8080
+        env:
+          - name: HTTP_PORT
+            value: "8080"
