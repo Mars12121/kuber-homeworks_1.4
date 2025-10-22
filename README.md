@@ -76,6 +76,7 @@
 
 Ответ:
 1. Манифест deployment с двумя контейнерами Nginx и MultiTool [deploy.yml](https://github.com/Mars12121/kuber-homeworks_1.4/blob/main/k8s/deploy.yml)
+
 ```
 apiVersion: apps/v1
 kind: Deployment
@@ -108,6 +109,7 @@ spec:
 ```
 
 2. Манифест service типа ClusterIP [service.yml](https://github.com/Mars12121/kuber-homeworks_1.4/blob/main/k8s/service.yml)
+
 ```
 apiVersion: v1
 kind: Service
@@ -127,12 +129,14 @@ spec:
     app: multi_web
   type: ClusterIP
 ```
+
 ![alt text](https://github.com/Mars12121/kuber-homeworks_1.4/blob/main/img/1.png)
 
 3. Проверяем доступность изнутри кластера
 ![alt text](https://github.com/Mars12121/kuber-homeworks_1.4/blob/main/img/2.png)
 
 4. Манифест service типа NodePort [service-np.yml](https://github.com/Mars12121/kuber-homeworks_1.4/blob/main/k8s/service-np.yml)
+
 ```
 apiVersion: v1
 kind: Service
@@ -189,7 +193,8 @@ spec:
 
  Ответ:
  1. Манифест deployment backend [deploy-back.yml](https://github.com/Mars12121/kuber-homeworks_1.4/blob/main/k8s/deploy-back.yml)
- ```
+ 
+```
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -215,7 +220,8 @@ spec:
             value: "8080"
  ```
 
- Манифест deployment frontend [deploy-front.yml](https://github.com/Mars12121/kuber-homeworks_1.4/blob/main/k8s/deploy-front.yml)
+Манифест deployment frontend [deploy-front.yml](https://github.com/Mars12121/kuber-homeworks_1.4/blob/main/k8s/deploy-front.yml)
+
 ```
 apiVersion: apps/v1
 kind: Deployment
@@ -260,6 +266,7 @@ spec:
 ```
 
 Манифест service frontend [service-front.yml](https://github.com/Mars12121/kuber-homeworks_1.4/blob/main/k8s/service-front.yml)
+
 ```
 apiVersion: v1
 kind: Service
@@ -281,6 +288,7 @@ spec:
 ![alt text](https://github.com/Mars12121/kuber-homeworks_1.4/blob/main/img/6.png)
 
 4. Манифест ingress [ingress.yml](https://github.com/Mars12121/kuber-homeworks_1.4/blob/main/k8s/ingress.yml)
+
 ```
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -312,6 +320,7 @@ spec:
 
 5. Проверяем доступность 
 Прописываем в hosts ВМ K8S
+
 ```
 127.0.0.1 netology-ingress-f-b.ru
 ```
