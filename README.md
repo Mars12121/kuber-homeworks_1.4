@@ -318,7 +318,7 @@ spec:
 
 ![alt text](https://github.com/Mars12121/kuber-homeworks_1.4/blob/main/img/7.png)
 
-5. Проверяем доступность 
+5. Проверяем доступность. 
 Прописываем в hosts ВМ K8S
 
 ```
